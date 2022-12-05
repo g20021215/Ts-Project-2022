@@ -243,7 +243,7 @@ print(result_table)
 
 
 # set the parameters that give the lowest AIC
-p, q, P, Q = 3,3,4,1 #result_table.parameters[0]
+p, q, P, Q = result_table.parameters[0]
 
 best_model = sm.tsa.statespace.SARIMAX(train, order=(p, d, q),
                                         seasonal_order=(P, D, Q, s)).fit(disp=-1)
